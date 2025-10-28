@@ -1,0 +1,293 @@
+{
+    "key": "group_5eac5643d695d",
+    "title": "Attorney Details",
+    "fields": [
+        {
+            "key": "field_5eac564cbca27",
+            "label": "Attorney Title",
+            "name": "attorney_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5eac5657bca28",
+            "label": "Attorney Location",
+            "name": "attorney_location",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Austin, TX": "Austin, TX",
+                "Boston, MA": "Boston, MA",
+                "Washington, DC": "Washington, DC",
+                "St. Louis, MO": "St. Louis, MO"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5eac5691bca29",
+            "label": "Attorney Phone",
+            "name": "attorney_phone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5eac569cbca2a",
+            "label": "Attorney Email",
+            "name": "attorney_email",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5eac56a6bca2b",
+            "label": "Attorney vCard",
+            "name": "attorney_vcard",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5eac56e0bca2c",
+            "label": "Attorney Headshot",
+            "name": "attorney_headshot",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f20266d1077b",
+            "label": "Practice Areas",
+            "name": "practice_areas",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "\/practice-areas\/government-investigations\/": "Government Investigations, Prosecutions & Enforcement Actions",
+                "\/practice-areas\/bank-secrecy-act\/": "Bank Secrecy Act \/ Anti-Money Laundering",
+                "\/practice-areas\/corporate-compliance-governance\/": "Corporate Compliance \/ Governance",
+                "\/practice-areas\/export-controls\/": "Export Controls, Economic Sanctions & ITAR Compliance",
+                "\/practice-areas\/fcpa-compliance-bribery-act\/": "FCPA & Anti-Corruption Compliance, and UK Bribery Act",
+                "\/practice-areas\/general-corporate-business\/": "General Corporate \/ Business",
+                "\/practice-areas\/health-care\/": "Health Care",
+                "\/practice-areas\/internal-investigations\/": "Internal Investigations",
+                "\/practice-areas\/legal-business-crisis-management\/": "Legal and Business Crisis Management",
+                "\/practice-areas\/mergers-acquisitions-due-diligence\/": "Mergers and Acquisitions Due Diligence",
+                "\/practice-areas\/securities-litigation\/": "Securities Litigation and SEC Enforcement Defense",
+                "\/practice-areas\/ethics-anti-corruption-compliance\/": "United Nations and World Bank Ethics and Anti-Corruption Compliance",
+                "\/practice-areas\/white-collar-defense\/": "White Collar Defense",
+                "\/practice-areas\/commercial-litigation\/": "Commercial Litigation",
+                "\/practice-areas\/appellate-litigation\/": "Appellate Litigation",
+                "\/practice-areas\/election-political-law\/": "Election and Political Law",
+                "\/practice-areas\/whistleblower-law\/": "Whistleblower Law"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "array",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5eac6a094a431",
+            "label": "Attorney Bio Copy",
+            "name": "attorney_bio_copy",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5eac6a204a432",
+            "label": "Accordion - Experience",
+            "name": "accordion_experience",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5eac6a464a433",
+            "label": "Accordion - Education",
+            "name": "accordion_education",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5eac6a584a434",
+            "label": "Accordion - Admissions",
+            "name": "accordion_admissions",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5eac6a664a435",
+            "label": "Accordion - Clerkships",
+            "name": "accordion_clerkships",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-attorney.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "attorneys"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1598303469
+}

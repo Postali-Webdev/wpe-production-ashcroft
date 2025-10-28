@@ -1,0 +1,109 @@
+/**
+ * Theme footer
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+@mixin small-gold {
+    color:$gold;
+    letter-spacing: .2em;
+    font-family: $mreaves;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+@mixin google-map-link {
+    a {
+        text-transform: uppercase;
+        letter-spacing: .4em;
+        color:$gold;
+        font-family:$mreaves;
+        font-size: 16px;
+        @media screen and (max-width:$screen-sm) {
+            letter-spacing: .2em;
+        }
+    }
+}
+
+@mixin updates-block {
+    .updates {
+        &.black {
+            padding-bottom: 0;
+        }
+        padding-top: 50px;
+        p.small-gold {
+            margin-bottom: 50px !important;
+        }
+    }
+    .blog-box {
+        width: calc(33.33% - 8px) !important;
+        background: #1A1A1A;
+        box-sizing: border-box;
+        margin-bottom: 12px;
+        @media screen and (max-width:$screen-ipad) {
+            width: calc(50% - 8px) !important;
+        }
+        @media screen and (max-width:$screen-sm) {
+            width: 100% !important;
+        }
+        a {
+            display:flex;
+            flex-wrap: wrap;
+            width: 100%;
+            transition:$trans;
+            height:100%;
+            &:hover {
+                h2 {
+                    text-decoration: underline;
+                    transition:$trans;
+                }
+
+            }
+            h2 {
+                font-size: 32px;
+            }
+            .blog-content {
+                padding: 40px;
+                p {
+                    margin-bottom:0 !important;
+                }
+            }
+            .read-article {
+                justify-content: center;
+                align-self: flex-end !important;
+                display: flex;
+                position: relative;
+                padding: 30px 0;
+                border-top: 1px solid #454545;
+                width:100%;
+                .link-text {
+                    margin-left:-20px;
+                    color: $gold;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: .4em;
+                    font-family: $mreaves;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .icon-right-arrow {
+                        font-size: 19px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .update-category {
+                font-size: 16px;
+                span {
+                    color:$gold;
+                }
+                span.comma {
+                    &:last-of-type {
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}

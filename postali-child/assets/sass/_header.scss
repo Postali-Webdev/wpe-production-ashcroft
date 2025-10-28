@@ -1,0 +1,349 @@
+/**
+ * Header Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+header {
+    display:flex;
+    padding:50px 0 !important;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    margin-right:0;
+    flex-basis: 100%;
+    @media screen and (max-width:$screen-ipad) {
+        background:none !important;
+    }
+    @media screen and (max-width:$screen-sm) {
+        padding:40px 0 !important;
+    }
+    #header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        #header-top_left {
+            display: flex;
+            flex-basis: 25%;
+            justify-content: flex-start;
+            @media screen and (max-width:$screen-sm) {
+                flex-basis:45%;
+                .custom-logo-link {
+                    z-index: 1;
+                }
+            }
+            @media screen and (max-width:$screen-xs) {
+                flex-basis: 65%;
+            }
+            @media screen and (max-width:$screen-xxs) {
+                flex-basis: 70%;
+                margin-top: 3px;
+            }
+            .custom-logo {
+                width: 300px;
+            }
+        }
+        #header-top_right {
+            display: flex;
+            flex-basis: 75%;
+            align-items: flex-end;
+            justify-content: flex-end;
+            @media screen and (max-width:$screen-ipad) {
+                display: block;
+            }
+            #header-top_menu {
+                .careers-link {
+                    display: block;
+                    text-align: right;
+                    margin-bottom: 5px;
+                    color:$gold;
+                    font-size: 16px;
+                    font-family: $mreaves;
+                    font-weight:700;
+                    @media screen and (max-width:$screen-ipad) {
+                        display:none;
+                    }
+                }
+                #menu-main-menu {
+                    list-style-type: none;
+                    display: flex;
+                    @media screen and (max-width:$screen-ipad) {
+                        padding: 110px 40px 50px 40px;
+                        top: -40px;
+                        background: rgba(19,19,19,0.93);
+                        height: auto;
+                        position: absolute;
+                        left: -35px;
+                        width: calc(100% + 30px);
+                        box-sizing: border-box;
+                    }
+                    li {
+                        display: inline-block;
+                        margin-left:50px;
+                        padding-bottom: 15px;
+                        position: relative;
+                        .accordion-toggle {
+                            display:none;
+                        }
+                        @media screen and (max-width:$screen-xl) {
+                            margin-left:15px;
+                        }
+                        @media screen and (max-width:$screen-ipad) {
+                            display:flex;
+                            margin-left: 0;
+                            flex-wrap: wrap;
+                            border-bottom: 1px solid $gold;
+                            padding-bottom: 0;
+                            padding: 0;
+                            .accordion-toggle {
+                                position: absolute;
+                                top: 15px;
+                                right: 0;
+                                z-index: 10;
+                                width: 30px;
+                                height: 30px;
+                                transition:$trans;
+                                display:flex;
+                                span {
+                                    color: $gold;
+                                    font-size: 25px;
+                                    transition:$trans;
+                                }
+                                &.toggle-background {
+                                    transition:$trans;
+                                    .toggle-rotate {
+                                        transform: rotate(45deg) !important;
+                                        transition:$trans;
+                                        top:-45px !important;
+                                    }
+                                } 
+                            }                   
+                        }
+                        &:first-of-type {
+                            margin-left:0;
+                        }
+                        &:hover {
+                            ul.sub-menu {
+                                display:block;
+                                z-index: 1;
+                                -webkit-animation: .3s ease 0s normal forwards 1 fadein;
+                                animation: .3s ease 0s normal forwards 1 fadein;
+
+                                @keyframes fadein{
+                                    0% { opacity:0; top:15px; }
+                                    100% { opacity:1; top:25px; }
+                                }
+
+                                @-webkit-keyframes fadein{
+                                    0% { opacity:0; top:15px; }
+                                    100% { opacity:1; top:25px; }
+                                }
+                                @media screen and (max-width:$screen-sm) {
+                                    -webkit-animation:none;
+                                    animation:none;
+                                }
+                            }
+                            @media screen and (max-width:$screen-ipad) {
+                                ul.sub-menu {
+                                    display:none;
+                                }
+                            }
+                        }
+                        &.current-menu-parent,
+                        &.current-menu-item {
+                            a {
+                                color:$gold;
+                            }
+                        }
+                        a {
+                            color:$white;
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            letter-spacing: .2em;
+                            font-family: $mreaves;
+                            font-weight:700;
+                            @media screen and (max-width:$screen-xl) {
+                                letter-spacing:.1em;
+                            }
+                            @media screen and (max-width:$screen-ipad) {
+                                width:100%;
+                                padding:10px 0;
+                            }
+                            &:hover,
+                            &.current_page_item {
+                                color:$gold;
+                            }
+                        }
+                        ul.sub-menu {
+                            width: auto;
+                            white-space: nowrap;
+                            transition: $trans;
+                            position: absolute;
+                            overflow: visible;
+                            background: $ltblk;
+                            z-index: 500;
+                            margin-top: 25px;
+                            padding: 35px 0 20px 40px !important;
+                            display: none;
+                            left: -40%;
+                            margin-left: 0;
+                            width: 230px;
+                            @media screen and (max-width:$screen-ipad) {
+                                position: relative;
+                                width: 100%;
+                                background:none;
+                                left:0;
+                                padding: 0 !important;
+                                transition:none;
+                                margin-top:10px;
+                                &:hover {
+                                    margin-top: 10px;
+                                }
+                            }
+                            li {
+                                display:block;
+                                margin: 0;
+                                padding-bottom: 10px;
+                                @media screen and (max-width:$screen-ipad) {
+                                    padding: 5px 0;
+                                    border-bottom: none;
+                                }
+                                a {
+                                    color:$white;
+                                    font-family: $ivymode;
+                                    font-size: 22px;
+                                    text-transform: none;
+                                    letter-spacing: 0;
+                                    transition:.3s ease all;
+                                    @media screen and (max-width:$screen-ipad) {
+                                        font-size:19px;
+                                        padding-left:10px;
+                                    }
+                                    &:before {
+                                        content:"/";
+                                        position:absolute;
+                                        left:0;
+                                        transition:.3s ease all;
+                                        opacity:0;
+                                        padding-right:20px;
+                                    }
+                                    &:hover {
+                                        color:$gold;
+                                        margin-left:25px;
+                                        transition:.3s ease all;
+                                        &:before {
+                                            content:"/";
+                                            position:absolute;
+                                            left:0;
+                                            transition:.3s ease all;
+                                            opacity:1;
+                                            padding-right:20px;
+                                        }
+                                    }
+                                }
+                                &.current-menu-item {
+                                    a {
+                                        color:$gold;
+                                        margin-left:25px;
+                                        transition:.3s ease all;
+                                        &:before {
+                                            content:"/";
+                                            position:absolute;
+                                            left:0;
+                                            transition:.3s ease all;
+                                            opacity:1;
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover li.menu-item-has-children {
+                                color:$gold;
+                            }
+                        }
+                        &:last-of-type {
+                            display:none;
+                            @media screen and (max-width:$screen-ipad) {
+                                display:flex;
+                            }
+                        }
+                    }
+                    @media screen and (max-width:$screen-ipad) {
+                        display:none;
+                    }
+                }
+                #header-top_mobile {
+                    display:none;
+                    @media screen and (max-width:$screen-ipad) {
+                        display: block;
+                        position: absolute;
+                        top: 5px;
+                        right: 25px;
+                        #menu-icon {
+                            width: 40px;
+                            height: 25px;
+                            position: relative;
+                            display: block;
+                            margin-top: 0;
+                            margin-right: 0;
+                            .line {
+                                display: block;
+                                background:$gold;
+                                width: 40px;
+                                height: 2px;
+                                position: absolute;
+                                left: 0;
+                                transition: all 0.4s;
+                                -webkit-transition: all 0.4s;
+                                -moz-transition: all 0.4s;
+                                    &.line-1 {
+                                        top: 0;
+                                    }
+                                    &.line-2 {
+                                        top: 50%;
+                                    }
+                                    &.line-3 {
+                                        top: 100%;
+                                    }
+                                }
+                                &.active {
+                                    .line-1 {
+                                        transform: translateY(12px) translateX(0) rotate(45deg);
+                                        -webkit-transform: translateY(12px) translateX(0) rotate(45deg);
+                                        -moz-transform: translateY(12px) translateX(0) rotate(45deg);
+                                    }
+                                    .line-2 {
+                                        opacity: 0;
+                                    }
+                                   .line-3 {
+                                        transform: translateY(-12px) translateX(0) rotate(-45deg);
+                                        -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg);
+                                        -moz-transform: translateY(-12px) translateX(0) rotate(-45deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+    }
+    #header-top_mobile {
+        display:none;
+        @media screen and (max-width: $screen-ipad) {
+            display:block;
+        }
+    }
+    #head-mobile {
+        display:none;
+        @media screen and (max-width: $screen-ipad) {
+            display:block;
+        }
+    }
+}
+
+// fix for practice areas dropdown on desktop 
+
+header #header-top #header-top_right #header-top_menu #menu-main-menu li#menu-item-182 ul.sub-menu {
+    width: 320px !important;
+}

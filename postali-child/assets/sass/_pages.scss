@@ -1,0 +1,705 @@
+/**
+ * Page Template Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+*/
+
+.page-template-page-interior,
+.page-template-page-attorney,
+.single-attorneys,
+.page-template-page-practice-areas,
+.page-template-page-practice-area-child,
+.page-template-page-professionals,
+.page-template-sitemap,
+.error404,
+.single,
+.post-type-archive-updates {
+    .page-container {
+        &:after {
+            display:none;
+        }
+        .page-left {
+            position:relative;
+            background-size:cover;
+            background-attachment: fixed;
+            background-position: center top;
+            width: 100%;
+            &:after {
+                background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 50%, rgba(19,19,19,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 50%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 50%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+                height:100%;
+                width:100%;
+                position:absolute;
+                bottom:0;
+                left:0;
+                content:"";
+                z-index: 0;
+                @media screen and (max-width:$screen-xs) {
+                    background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 20%, rgba(19,19,19,1) 100%) ; /* FF3.6-15 */
+                    background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 20%,rgba(19,19,19,1) 100%) ; /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 20%,rgba(19,19,19,1) 100%) ; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ) ; /* IE6-9 */
+    
+                }
+            }
+            ul {
+                list-style-type:none;
+                margin-bottom:40px;
+                li {
+                    position:relative;
+                    &:before {
+                        content:"•";
+                        font-size: 14px;
+                        position:absolute;
+                        left:0;
+                        left: -20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// page-specific tweaks to universal elements //
+
+// professionals landing page //
+
+.page-template-page-professionals {
+    .page-container {
+        background-position: center top;
+        @media screen and (max-width:$screen-ipad) {
+            background-position: top left -100px !important;
+        }
+    }
+    .page-left {
+        &:after {
+            background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 50%, rgba(19,19,19,1) 100%) !important; /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 50%,rgba(19,19,19,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 50%,rgba(19,19,19,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+        }
+    }
+    section.title-section {
+        padding-bottom: 60px;
+    }
+    .professionals-grid {
+        padding-bottom:0;
+        .container {
+            .columns {
+                justify-content: flex-start;
+                .column-25 {
+                    margin: 0 0 100px 0;
+                    width: 25%;
+                    @media screen and (max-width:$screen-ipad) {
+                        width: 33.33%;
+                    }
+                    @media screen and (max-width:$screen-md) {
+                        width: 50%;
+                    }
+                    @media screen and (max-width:$screen-xs) {
+                        width: 100%;
+                    }
+                    img {
+                        max-width: 65%;
+                        margin: 0 auto 40px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .caption p {
+        font-size: 16px;
+        line-height: 180%;
+        margin-top: 60px;
+        padding-top: 30px;
+        border-top: 1px solid #454545;
+    }
+}
+
+// single posts //
+
+.single {
+    .page-left {
+        &:after {
+            background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 25%, rgba(19,19,19,1) 100%) !important; /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 25%,rgba(19,19,19,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 25%,rgba(19,19,19,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+        }
+    }
+    section.title-section {
+        padding: 0 !important;
+        height: auto;
+        justify-content: center;
+        align-content: center;
+        display: flex;
+        min-height: 170px;
+        @media screen and (max-height:900px) {
+            min-height: 110px;
+        }
+        @media screen and (max-width:$screen-md) {
+            min-height: 200px;
+        }
+        @media screen and (max-width:$screen-sm) {
+            min-height: 0;
+        }
+    }
+    section.post-content {
+        .column-full {
+            padding:0 12%;
+            @media screen and (max-height:900px) {
+                padding:0;
+            }
+            #share {
+                a {
+                    span {
+                        font-size: 40px;
+                        color:$blk;
+                    }
+                }
+            }
+        }
+    }
+    .image-caption {
+        font-family: $mreaves;
+        font-size: 16px;
+        color:$gold;
+        margin-top: 40px;
+        border-top:1px solid #545454;
+        padding-top:20px;
+        line-height: 180%;
+    }
+    @include updates-block;
+
+    #associated-attorney {
+        padding: 25px 0px;
+        .container {
+            .columns {
+                padding:0 12%;
+                align-items: center;
+                .column-50 {
+                    &.separator {
+                        position: relative;
+                        &::after {
+                            content:"/";
+                            color:$gold;
+                            position:absolute;
+                            right:0;
+                            font-size: 70px;
+                            font-weight: normal;
+                            font-family: $ivymode;
+                            top: -9px;
+                        }
+                        @media screen and (max-width:$screen-sm) {
+                            &::after {
+                                display:none;
+                            }
+                            h2 {
+                                text-align: center;
+                                margin-bottom: 30px;
+                                br {
+                                    display:none
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        h2 {
+            color:$blk;
+            font-size: 36px;
+        }
+        h3 {
+            color:$blk;
+            font-size: 26px;
+            width: 100%;
+            margin: 6px 0 3px;
+        }
+        span {
+            margin-bottom: 0 !important;
+            &.small-gold {
+                color: $gold;
+                letter-spacing: .2em;
+                font-family: $mreaves;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            &.read-bio {
+                font-family: $mreaves;
+                a {
+                    color:$blk;
+                    font-size: 16px;
+                    font-family: inherit;
+                    text-decoration: underline;
+                    &:hover {
+                        color:$gold;
+                    }
+                }
+            }
+        }
+        .associated-attorney-details {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin:10px 0;
+            @media screen and (max-width:$screen-xxs) {
+                align-items: flex-start;
+            }
+            .img {
+                margin-right: 25px;
+                img {
+                    max-width: 80px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+// blog landing //
+
+.post-type-archive-updates {
+    .page-container {
+        background-position: center top;
+    }
+    .page-left {
+        &:after {
+            background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 50%, rgba(19,19,19,1) 100%) !important; /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 50%,rgba(19,19,19,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 50%,rgba(19,19,19,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+        }
+    }
+    section.title-section {
+        padding-bottom:60px !important;
+    }
+    section.blog-grid {
+        background:$white;
+        @include updates-block;
+    }
+}
+
+// contact page //
+
+.page-id-59 {
+    .page-container {
+        @media screen and (max-width:$screen-sm) {
+            background-position: top left -200px !important;
+        }
+    }
+    .page-left {
+        &:after {
+            background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 25%, rgba(19,19,19,1) 100%) !important; /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 25%,rgba(19,19,19,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 25%,rgba(19,19,19,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+        }
+    }
+    section.title-section {
+        padding: 0 !important;
+        height: 15vh;
+        justify-content: center;
+        align-content: center;
+        display: flex;
+        min-height: 170px;
+        @media screen and (max-height:900px) {
+            height:10vh;
+            min-height: 110px;
+        }
+        @media screen and (max-width:$screen-sm) {
+            min-height: 200px;
+        }
+    }
+    section.form-section {
+        height: calc(85vh - 280px);
+        padding: 0 0 85px;
+        display: flex;
+        align-items: flex-end;
+        min-height: 500px;
+        @media screen and (max-width:$screen-sm) {
+            min-height: 0;
+            height:auto;
+        }
+    }
+    .location-boxes {
+        padding-top:0;
+        .location-box {
+            display: flex;
+            width: 50%;
+            flex-wrap: wrap;
+            border: 6px solid $ltblk;
+            box-sizing: border-box;
+            background:$dkgray;
+            @media screen and (max-width:$screen-sm) {
+                width:100%;
+                display:block;
+            }
+            img {
+                @media screen and (max-width:$screen-sm) {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+            .address {
+                display: block;
+                width: 100%;
+                padding: 40px;
+                text-align: center;
+                box-sizing: border-box;
+                p.small {
+                    line-height:145% !important;
+                }
+                .map-link {
+                    @include google-map-link;
+                }
+            }
+            .phone-fax {
+                display: flex;
+                width: 100%;
+                @media screen and (max-width:$screen-xs) {
+                    flex-wrap:wrap;
+                }
+                .column {
+                    display: flex;
+                    width: 50%;
+                    border-top: 1px solid #444;
+                    justify-content: center;
+                    align-items: center;
+                    height: 70px;
+                    font-size: 20px;
+                    font-family: $mreaves;
+                    letter-spacing: .1em;
+                    box-sizing: border-box;
+                    color:$white;
+                    @media screen and (max-width:$screen-xs) {
+                        width:100%;
+                    }
+                    &:first-of-type {
+                        border-right:1px solid #444;
+                        @media screen and (max-width:$screen-xs) {
+                            border-right:none;
+                        }
+                        a {
+                            font-family: $mreaves;
+                            color:$white;
+                        }
+                    }
+                    &:last-of-type {
+                        @media screen and (max-width:$screen-xs) {
+                            border-bottom:1px solid #444;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// attorney bio pages //
+
+.page-template-page-attorney,
+.single-attorneys {
+    .page-left {
+        &:after {
+            @media screen and (max-width:$screen-xs) {
+                background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 10%, rgba(19,19,19,1) 100%) !important; /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 10%,rgba(19,19,19,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 10%,rgba(19,19,19,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ) !important; /* IE6-9 */
+
+            }
+        }
+    }
+    section.title-section {
+        padding: 0;
+        height: 5vh;
+        min-height: 0;
+        @media screen and (max-height:950px) {
+            height:auto;
+        }
+        @media screen and (max-width:$screen-sm) {
+            padding: 50px 0 0;
+            height:auto;
+        }
+        @media screen and (max-width:$screen-xxs) {
+            padding: 0;
+        }
+    }
+    section.attorney-bio {
+        padding-bottom:50px;
+        @media screen and (max-width:$screen-sm) {
+            padding-bottom:60px;
+        }
+        .container {
+            width: auto;
+            .columns {
+                .column-33 {
+                    @media screen and (max-width:$screen-lg) {
+                        width:35%;
+                    }
+                    @media screen and (max-width:$screen-sm) {
+                        width:100%;
+                        margin-bottom:30px;
+                    }
+                    .attorney-info-container {
+                        height: 100%;
+                        @media screen and (max-width:$screen-sm) {
+                            height:auto;
+                        }
+                        .attorney-info {
+                            position: relative;
+                            height: 100%;
+                            @media screen and (max-width:$screen-sm) {
+                                height:auto;
+                            }
+                            .location-column {
+                                position: sticky;
+                                top: 60px;
+                                padding-bottom: 0px;
+                                padding-top:60px;
+                                @media screen and (max-height:950px) {
+                                    padding-top:0;
+                                }
+                                .attorney-bio-headshot {
+                                    width: 200px;
+                                    border-radius: 50%;
+                                    @media screen and (max-width:$screen-xxs) {
+                                        width:175px;
+                                    }
+                                }
+                                p.small-gold {
+                                    margin-bottom:15px !important;
+                                }
+                                p {
+                                    .gold {
+                                        width: 20px !important;
+                                        display: inline-block;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .column-66 {
+                    @media screen and (max-width:$screen-lg) {
+                        width:59%;
+                    }
+                    @media screen and (max-width:$screen-sm) {
+                        width:100%;
+                    }
+                    .spacer-top {
+                        height: 40vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        @media screen and (max-width:$screen-sm) {
+                            height:auto;
+                            .spacer-90,
+                            .spacer-15 {
+                                display:none;
+                            }
+                        }
+                        .scroll-for-more {
+                            position:relative;
+                            text-align: left;
+                            text-transform: uppercase;
+                            letter-spacing: .2em;
+                            margin-top:40px;
+                            @media screen and (max-width:$screen-sm) {
+                                display:none;
+                            }
+                            .scroll-text {
+                                font-size: 14px !important;
+                                color:#666;
+                            }
+                            .icon-mouse {
+                                color: $white;
+                                font-size: 25px;
+                                position: relative;
+                                display: inline-block;
+                                bottom: -4px;
+                                left: auto;
+                            }
+                        }
+                    }
+                    .practice-area-list {
+                        ul {
+                            margin-left:0 !important;
+                            li {
+                                padding:15px 0;
+                                border-top:1px solid #444;
+                                border-bottom:1px solid #444;
+                                margin-top: -1px;
+                                padding-right:20%;
+                                font-family: $ivymode !important;
+                                font-size: 24px !important;
+                                line-height: 135%;
+                                cursor: pointer;
+                                &:before {
+                                    display:none !important;
+                                }
+                                &:after {
+                                    content: "\e902";
+                                    font-size: 24px;
+                                    font-family: icomoon;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 15px;
+                                    color: $gold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include updates-block;
+}
+
+// practice area landing //
+
+.page-template-page-practice-areas {
+    .page-container {
+        background-position: center top -300px;
+    }
+    .page-left {
+        &:after {
+            background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 20%, rgba(19,19,19,1) 100%) !important; /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 20%,rgba(19,19,19,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 20%,rgba(19,19,19,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+        }
+    }
+    .practice-area-links a {
+        width: 100%;
+        padding: 40px 10% 40px 0;
+        border-top: 1px solid #454545;
+        position: relative;
+        @media screen and (max-width:$screen-xs) {
+            padding:40px 20% 40px 0;
+        }
+        &:after {
+            content: "\e902";
+            font-size: 34px;
+            font-family: icomoon;
+            position: absolute;
+            right: 0;
+            top: 39%;
+            color: $gold;
+        }
+        &:last-of-type {
+            border-bottom: 1px solid #454545;
+        }
+    }
+}
+
+// practice area child pages //
+
+.page-template-page-practice-area-child {
+    section.title-section {
+        padding-bottom:60px;
+    }
+    @include updates-block;
+    .associated-attorneys {
+        padding:15px 0;
+        a {
+            display:flex;
+            flex-wrap: nowrap;
+            .attorney-headshot {
+                display: flex;
+                width: 15%;
+                margin-right: 7%;
+                img {
+                    border-radius: 50%;
+                    max-height: 70px;
+                    min-width: 70px;
+                }
+            }
+            .attorney-details {
+                display: block;
+                padding-top: 0;
+                .attorney-name {
+                    width: 100%;
+                    margin: 0;
+                    font-family: $ivymode;
+                    font-size: 26px;
+                    line-height: 130%;
+                    display: block;
+                }
+                p.small-gold {
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+    hr {
+        margin: 0;
+        border: none;
+        border-bottom: 1px solid #444;
+    }
+}
+
+.page-template-sitemap {
+    .page-left {
+        &:after {
+            background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 75%, rgba(19,19,19,1) 100%) !important; /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 75%,rgba(19,19,19,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 75%,rgba(19,19,19,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+            @media screen and (max-width:$screen-sm) {
+                background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 40%, rgba(19,19,19,1) 100%) !important; /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 40%,rgba(19,19,19,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 40%,rgba(19,19,19,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+            }
+        }
+    }
+}
+
+// privacy policy //
+
+.page-id-185 {
+    .page-left {
+        &:after {
+            background: -moz-linear-gradient(top,  rgba(19,19,19,0) 1%, rgba(19,19,19,1) 20%, rgba(19,19,19,1) 100%) !important; /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 20%,rgba(19,19,19,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(19,19,19,0) 1%,rgba(19,19,19,1) 20%,rgba(19,19,19,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00131313', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+        }
+        p {
+            margin-bottom:30px !important;
+            &.small-gold {
+                margin-bottom:10px !important;
+            }
+        }
+    }
+}
+
+.page-id-293 {
+    p {
+        margin-bottom:15px !important;
+        &.small-gold {
+            a {
+                font-size: 18px;
+                color:$gold;
+                align-items: center;
+                display:flex;
+                span {
+                    padding-left:10px;
+                }
+            }
+        }
+    }
+    .disclaimer-text {
+        position: relative;
+        bottom: 0;
+    }
+
+}

@@ -1,0 +1,127 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+footer {
+    padding: 150px 0 30px;
+    background: url(/wp-content/uploads/2020/04/bg-footer.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    background-size:cover;
+    .footer-logo {
+        max-width:250px;
+    }
+    .location-column {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0 7px;
+        border-bottom: 1px solid #444;
+        @media screen and (max-width:$screen-xs) {
+            flex-wrap:wrap;
+            padding:15px 11px;
+        }
+        .column {
+            font-family: $mreaves;
+            font-size: 18px;
+            color:$white;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &.location-name {
+                padding-left: 30px;
+                position: relative;
+                width: 40%;
+                @media screen and (max-width:$screen-lg) {
+                    width:30%;
+                }
+                @media screen and (max-width:$screen-md) {
+                    width:35%;
+                }
+                @media screen and (max-width:$screen-xs) {
+                    width: 45%;
+                    box-sizing: border-box;
+                    padding-left:20px;
+                }
+                &:before {
+                    content:"\e903";
+                    font-family: icomoon;
+                    color:$gold;
+                    position:absolute;
+                    left:0;
+                    font-size: 14px;
+                    top: 1px;
+                    @media screen and (max-width:$screen-xs) {
+                        left:-2px;
+                    }
+                }
+            }
+            &.location-number {
+                align-items: flex-start;
+                width: 30%;
+                @media screen and (max-width:$screen-md) {
+                    width:35%;
+                }
+                @media screen and (max-width:$screen-xs) {
+                    width: 45%;
+                    box-sizing: border-box;
+                    justify-content: flex-end;
+                }
+                a {
+                    text-transform: uppercase;
+                    letter-spacing: .15em;
+                    color:$white;
+                    font-family:$mreaves;
+                    font-size: 18px;
+                    position: relative;
+                    &:before {
+                        content:"P";
+                        color:$gold;
+                        position:absolute;
+                        left:-20px;
+                    }
+                }
+            }
+            &.map-link {
+                justify-content:flex-end;
+                width: 30%;
+                @include google-map-link;
+                @media screen and (max-width:$screen-lg) {
+                    width:40%;
+                }
+                @media screen and (max-width:$screen-md) {
+                    width:30%;
+                }
+                @media screen and (max-width:$screen-xs) {
+                    width:100%;
+                    margin-top:10px;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+    p.xsmall {
+        a {
+            text-decoration: none;
+        }
+        span {
+            color: $gold;
+            padding-top: 6px;
+            position: absolute;
+        }
+    }
+    .container {
+        .columns {
+            .column-25 {
+                @media screen and (max-width:$screen-md) {
+                    width:100%;
+                }
+            }
+        }
+    }
+}

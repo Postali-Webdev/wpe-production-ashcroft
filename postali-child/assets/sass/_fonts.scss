@@ -1,0 +1,198 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+body, h1, h2, h3, h4, h5, h6, p, a, ul {
+    // color: $body-text-color;
+} 
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: normal !important;
+}
+
+ul,
+ol {
+    margin-bottom: 40px;
+}
+
+ul li, ol li {
+    font-size:20px;
+    line-height: 180%;
+    font-family: $mreaves;
+    color:$white;
+}
+
+ul li a {
+    font-family: $mreaves;
+}
+
+dl, blockquote, img {
+
+}
+
+a {
+    text-decoration:none;
+    -webkit-transition:$trans;
+    transition:$trans;
+    &:hover {
+        // color:$lt-red;
+        text-decoration:none;
+    }
+}
+
+.btn {
+    display: inline-table;
+    text-decoration: none;
+    line-height: 100%;
+    font-size: 17px;
+    font-family: $mreaves;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid white;
+    text-align: left;
+	padding: 20px 70px 18px 35px;
+	position: relative;
+	cursor: pointer;
+    letter-spacing: .1em;
+    transition: $trans;
+	&:hover {
+		background:none;
+		padding-left:40px;
+		padding-right:65px;
+		transition: $trans;
+		color:$gold;
+		&:after {
+			right:25px;
+			transition: $trans;
+		}
+	}
+	&:after {
+		color:$gold;
+		content:"\e902";
+		font-family: icomoon;
+		position: absolute;
+		top:21px;
+		right:30px;
+		font-size: 20px;
+		transition: $trans;
+	}
+}
+
+h1 {
+    font-family: $ivymode;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 135%;
+    text-transform: none;
+    color:$white;
+    @media screen and (max-width:$screen-ipad) {
+        font-size:44px;
+    }
+    @media screen and (max-width:$screen-xs) {
+        font-size: 36px;
+    }
+}
+
+h2 {
+    font-family: $ivymode;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 135%;
+    text-transform: none;
+    color:$white;
+    @media screen and (max-width:$screen-lg) {
+        font-size: 35px;
+    }
+    @media screen and (max-width:$screen-sm) {
+        font-size:30px;
+    }
+    @media screen and (max-width:$screen-xs) {
+        font-size:25px;
+    }
+}
+
+h3 {
+    font-family: $ivymode;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 135%;
+    text-transform: none;
+    color:$white;
+}
+
+h4 {
+    font-family: $ivymode;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 135%;
+    text-transform: none;
+    color:$white;
+}
+
+p {
+    font-size:20px;
+    line-height: 180%;
+    margin-bottom:40px !important;
+    font-family: $mreaves;
+    color:$white;
+    &.small-gold {
+        @include small-gold;
+    }
+    &.small {
+        font-size:18px;
+    }
+    &.xsmall {
+        font-size:16px;
+    }
+    a {
+        font-family: inherit;
+        font-size: inherit;
+        color:$white;
+        text-decoration: underline;
+        &.stretched {
+            letter-spacing: .4em;
+            @media screen and (max-width:$screen-xs) {
+                letter-spacing: .3em;
+            }
+        }
+    }
+}
+
+.gold {
+    color:$gold;
+}
+
+// breadcrumbs //
+
+#breadcrumbs {
+    padding: 0;
+    margin-bottom:0 !important;
+    font-size: 14px;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    span {
+        span {
+            a {
+                color:$gold;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.disclaimer-text {
+
+    position: absolute;
+    bottom: 30px;
+    font-size: 16px;
+    font-style: italic;
+    text-decoration: underline;
+    font-family: $mreaves;
+
+}

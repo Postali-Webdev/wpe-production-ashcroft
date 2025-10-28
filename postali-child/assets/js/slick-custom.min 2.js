@@ -1,0 +1,1 @@
+jQuery(function(s){"use strict";s(".slides").slick({dots:!1,infinite:!0,fade:!1,autoplay:!1,speed:800,slidesToShow:3,slidesToScroll:1,prevArrow:!1,nextArrow:'<button class="slider-arrow next"></button>',swipeToSlide:!0,cssEase:"ease-in-out",responsive:[{breakpoint:1025,settings:{slidesToShow:2,slidesToScroll:1}},{breakpoint:769,settings:{slidesToShow:1,slidesToScroll:1}}]})});

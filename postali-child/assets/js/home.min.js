@@ -1,0 +1,1 @@
+jQuery(function(e){"use strict";e(document).ready(function(){"yes"==Cookies.get("animate")&&e(".logo-animate").css("display","none"),setTimeout(function(){Cookies.set("animate","yes")},8e3)}),e(document).ready(function(){setTimeout(function(){e(".logo-animate").css("display","none")},8e3)})});
