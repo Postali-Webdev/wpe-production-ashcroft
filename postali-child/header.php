@@ -74,13 +74,15 @@ __SVGATOR_PLAYER__.build({"root":"evc3xcvizs5a1","animations":&#91;{"duration":7
 			<div id="header-top_right">
 				<div id="header-top_menu">
 					<a class="careers-link" href="/careers/">Careers</a>
+                        <nav>
 						<?php
 							$args = array(
 								'container' => false,
 								'theme_location' => 'header-nav'
 							);
 							wp_nav_menu( $args );
-						?>			
+						?>		
+                        </nav>	
 					<div id="header-top_mobile">
 						<div id="menu-icon" class="toggle-nav">
 							<span class="line line-1"></span>
